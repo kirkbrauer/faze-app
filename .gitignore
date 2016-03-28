@@ -1,0 +1,16 @@
+plugins
+node_modules
+.idea
+.temp
+.sass-cache
+platforms/ios
+platforms/android
+resources/android
+resources/ios
+www/lib
+*.swp
+*.swo
+*.log
+*.DS_Store
+
+app/scripts/configuration.js

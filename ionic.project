@@ -1,0 +1,12 @@
+{
+  "name": "faze",
+  "app_id": "com.fazemessenger.faze",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
