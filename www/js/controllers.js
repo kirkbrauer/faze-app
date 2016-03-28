@@ -89,6 +89,7 @@ angular.module('faze.controllers', [])
 })
 
 .controller('LoginCtrl', function(store, $scope, $location, auth, $ionicPopup, $state) {
+  $scope.auth = auth;
   $scope.login = function() {
     auth.signin({
       authParams: {

@@ -28,32 +28,26 @@ fazeapp = angular.module('faze', ['ionic', 'faze.controllers', 'auth0', 'angular
         if (avail) {
           ThreeDeeTouch.configureQuickActions([
         {
-          type: 'checkin', // optional, but can be used in the onHomeIconPressed callback
-          title: 'Check in', // mandatory
-          subtitle: 'Quickly check in', // optional
+          type: 'newmessage', // optional, but can be used in the onHomeIconPressed callback
+          title: 'New Message', // mandatory
           iconType: 'Compose' // optional
         },
         {
-          type: 'share',
-          title: 'Share',
-          subtitle: 'Share like you care',
-          iconType: 'Share'
-        },
-        {
           type: 'search',
-          title: 'Search',
+          title: 'Search Users',
           iconType: 'Search'
         },
         {
-          title: 'Show favorites',
-          iconTemplate: 'HeartTemplate' // from Assets catalog
+          type: 'share',
+          title: 'Share Faze',
+          iconType: 'Share'
         }
       ]);
       document.addEventListener('deviceready', function () {
       ThreeDeeTouch.onHomeIconPressed = function (payload) {
         console.log("Icon pressed. Type: " + payload.type + ". Title: " + payload.title + ".");
-        if (payload.type == 'checkin') {
-          document.location = 'checkin.html';
+        if (payload.type == 'newmessage') {
+          document.location = 'messages.html';
         } else if (payload.type == 'share') {
           document.location = 'share.html';
         } else {
