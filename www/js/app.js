@@ -11,9 +11,10 @@ fazeapp = angular.module('faze', ['ionic', 'faze.controllers', 'auth0', 'angular
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
 
-    if (window.cordova && Keyboard) {
-      Keyboard.hideFormAccessoryBar(true);
-      Keyboard.disableScrollingInShrinkView(true);
+    if (window.cordova && cordova.plugins.Keyboard) {
+      console.log("Has Keyboard");
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      cordova.plugins.Keyboard.disableScroll(true);
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
